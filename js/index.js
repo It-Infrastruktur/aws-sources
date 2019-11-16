@@ -14,7 +14,7 @@ exports.handler = async (event) => {
   return newsapi.v2.sources(params).then((resp) => {
     const response = {"isBase64Encoded": false,
                     "statusCode": 200,
-                    "headers": { "headerName": "headerValue" }
+                    "headers": { "Access-Control-Allow-Origin": "*" }
                     };
     response.body = JSON.stringify(resp);
     return response;
